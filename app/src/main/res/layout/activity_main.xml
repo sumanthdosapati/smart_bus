@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/dlout"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+     <!--   <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp"></Spinner>     -->
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:id="@+id/source_et"
+            android:hint="Enter source loaction"
+            android:background="@color/cardview_shadow_end_color"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:layout_marginTop="8dp"
+            android:id="@+id/destination_et"
+            android:hint="Enter destination"
+            android:background="@color/cardview_shadow_end_color"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/book_btn"
+            android:layout_marginTop="16dp"
+            android:text="Book Ticket"
+            android:background="@color/orange"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="bold"></Button>
+
+
+    </LinearLayout>
+
+
+
+    <com.rom4ek.arcnavigationview.ArcNavigationView
+        android:id="@+id/nvview"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@drawable/backgroundorange"
+        android:fitsSystemWindows="true"
+        app:itemBackground="@drawable/orangegradientlight"
+        app:headerLayout="@layout/header"
+        app:menu="@menu/drawermenu"
+        app:arc_cropDirection="cropInside"
+        app:arc_width="96dp"/>
+
+
+
+</android.support.v4.widget.DrawerLayout>

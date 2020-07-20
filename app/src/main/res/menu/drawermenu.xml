@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+    <item
+        android:id="@+id/action_book"
+        android:title="Book Ticket"
+        android:icon="@drawable/busicon"/>
+    <item
+        android:id="@+id/action_history"
+        android:title="My Bookings"
+        android:icon="@drawable/historyicon"/>
+
+    <item
+        android:id="@+id/action_wallet"
+        android:title="Wallet"
+        android:icon="@drawable/walleticon"/>
+
+    <item
+        android:id="@+id/action_developers"
+        android:icon="@drawable/groupicon"
+        android:title="Developers"/>
+
+    <item
+        android:id="@+id/action_live"
+        android:title="Community Chat" />
+
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/action_suggest"
+                android:icon="@drawable/suggesticon"
+                android:title="Suggestions"/>
+            <item
+                android:id="@+id/action_share"
+                android:icon="@drawable/shareicon"
+                android:title="Share" />
+            <item
+                android:id="@+id/action_rate"
+                android:icon="@drawable/staricon"
+                android:title="Rate Us" />
+
+        </menu>
+    </item>
+
+
+</menu>
