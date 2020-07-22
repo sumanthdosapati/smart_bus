@@ -20,7 +20,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
-        <activity android:name=".Suggestions"></activity>
+        <activity android:name=".SuccessfulTransaction"></activity>
+        <activity android:name=".FailedTransaction" />
+        <activity android:name=".Transactionpage" />
+        <activity android:name=".No_of_tickets" />
+        <activity android:name=".Suggestions" />
         <activity android:name=".MyBookings" />
         <activity android:name=".CommunityChat" />
         <activity android:name=".Register" />
@@ -30,7 +34,6 @@
         <activity
             android:name=".Welcome"
             android:configChanges="orientation|keyboardHidden|screenSize"
-
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -39,13 +42,16 @@
             </intent-filter>
         </activity>
         <activity android:name=".Login" />
-        <activity android:name=".MainActivity"
-            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" >
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
+
+            <!--
             getSupportActionBar().setBackgroundDrawable(new
             colorDrawable(getResources().getColor(R.Color.PrimaryDark)));
+            -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
             </intent-filter>
         </activity>
     </application>

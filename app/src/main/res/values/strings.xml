@@ -5,4 +5,6 @@
     <string name="dummy_content">DUMMY\nCONTENT</string>
     <string name="open">Open</string>
     <string name="close">Close</string>
+    <string name="source">Source</string>
+    <string name="destination">Destination</string>
 </resources>

@@ -4,6 +4,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
+import androidx.appcompat.app.AppCompatActivity;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -16,6 +17,8 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -25,11 +28,38 @@ public class MainActivity extends AppCompatActivity {
     private ActionBarDrawerToggle actionBarDrawerToggle;
     private NavigationView navigationView;
 
+    EditText sour,dest;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.orange)));
+
+        sour=findViewById(R.id.source_et);
+        dest=findViewById(R.id.destination_et);
+        final String source=sour.getText().toString();
+        final String destination=dest.getText().toString();
+        Button book=findViewById(R.id.book_btn);
+        book.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+
+                if((sour.getText().toString().isEmpty()) || dest.getText().toString().isEmpty())
+                {
+                    Toast.makeText(getApplicationContext(),"Source or Destination cannot be empty",Toast.LENGTH_SHORT).show();
+                }
+                else {
+
+                    Intent myIntent = new Intent(getApplicationContext(), No_of_tickets.class);
+                    myIntent.putExtra("selected_source", source);
+                    myIntent.putExtra("selected_destination", destination);
+                    startActivity(myIntent);
+                }
+            }
+        });
 
 
         drawerLayout=(DrawerLayout) findViewById(R.id.dlout);
@@ -156,21 +186,18 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
+
+
+
     @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle item selection
-        switch (item.getItemId()) {
-            case R.id.logout:
-                Intent lo=new Intent(getApplicationContext(),Login.class);
-                startActivity(lo);
-                return true;
-            case R.id.settings:
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
+    public boolean onOptionsItemSelected(MenuItem item){
+        if(actionBarDrawerToggle.onOptionsItemSelected(item)) {
+            return true;
+        }
+        else {
+            return super.onOptionsItemSelected(item);
         }
     }
-
 
 
 }

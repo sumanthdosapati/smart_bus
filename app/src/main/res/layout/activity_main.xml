@@ -18,13 +18,31 @@
         android:orientation="vertical"
         android:gravity="center_horizontal">
 
-     <!--   <Spinner
+        <!--
+        <Spinner
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="12dp"></Spinner>     -->
+            android:layout_height="50dp"
+            android:padding="12dp"
+            android:id="@+id/spnsource"
+            android:background="@color/cardview_shadow_end_color"
+            android:prompt="@string/source"
+            >
+        </Spinner>
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:padding="12dp"
+            android:layout_marginTop="8dp"
+            android:id="@+id/spndestin"
+            android:background="@color/cardview_shadow_end_color"
+            android:prompt="@string/destination"
+            >
+        </Spinner>
+-->
 
 
-        <EditText
+       <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="12dp"
@@ -40,6 +58,8 @@
             android:id="@+id/destination_et"
             android:hint="Enter destination"
             android:background="@color/cardview_shadow_end_color"/>
+
+
 
         <Button
             android:layout_width="wrap_content"
@@ -62,9 +82,9 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        android:background="@drawable/backgroundorange"
+        android:background="@drawable/orangepinkgradient"
         android:fitsSystemWindows="true"
-        app:itemBackground="@drawable/orangegradientlight"
+        app:itemBackground="@null"
         app:headerLayout="@layout/header"
         app:menu="@menu/drawermenu"
         app:arc_cropDirection="cropInside"
